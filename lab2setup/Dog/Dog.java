@@ -14,4 +14,9 @@ public class Dog {
         } 
         return "bark";
     }
+    public static void main(){
+        Dog charlie = new Dog(10);
+        charlie.noise();
+    }
+
 }
