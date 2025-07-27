@@ -4,7 +4,7 @@ public class ArrayDeque<T> {
     int size, first, last, used;
     T[] items;
     public ArrayDeque(){
-        items = (T[]) new Object[0];
+        items = (T[]) new Object[8];
         size = 0;
         first = last = -1;
     }
@@ -26,11 +26,9 @@ public class ArrayDeque<T> {
 
     public void addFirst(T item){
 
-        if (size == 0){
-            size = 8;
+        if (used == 0) {
             first = last = 4;
             used += 1;
-            items = (T[]) new Object[8];
             items[4] = item;
             return;
         }
@@ -49,11 +47,9 @@ public class ArrayDeque<T> {
         }
     }
     public void addLast(T item){
-        if (size == 0){
-            size = 8;
+        if (used == 0) {
             first = last = 4;
             used += 1;
-            items = (T[]) new Object[8];
             items[4] = item;
             return;
         }
@@ -104,18 +100,18 @@ public class ArrayDeque<T> {
         }
         System.out.println();
     }
-    public static void main(String[] args){
-        ArrayDeque<Integer> a = new ArrayDeque<>();
-        a.addFirst(1);
-        a.addLast(2);
-        for (int i = 3; i <= 10;i++){
-            a.addLast(3*i);
-            a.addLast(3*i+1);
-            a.addLast(3*i+2);
-        }
-        for (int i = 3;i <= 10;i++){
-            a.removeLast();a.removeLast();a.removeLast();
-        }
-    }
+//    public static void main(String[] args){
+//        ArrayDeque<Integer> a = new ArrayDeque<>();
+//        a.addFirst(1);
+//        a.addLast(2);
+//        for (int i = 3; i <= 10;i++){
+//            a.addLast(3*i);
+//            a.addLast(3*i+1);
+//            a.addLast(3*i+2);
+//        }
+//        for (int i = 3;i <= 10;i++){
+//            a.removeLast();a.removeLast();a.removeLast();
+//        }
+//    }
 }
 

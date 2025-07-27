@@ -95,10 +95,10 @@ public class LinkedListDeque<T> {
         return sentinel.next.get(index);
     }
 
-    public static void main(String[] args){
-        LinkedListDeque<Integer> lst = new LinkedListDeque<>();
-        lst.addLast(1);
-        lst.addFirst(2);
-        System.out.println(lst.getRecursive(1));
-    }
+//    public static void main(String[] args){
+//        LinkedListDeque<Integer> lst = new LinkedListDeque<>();
+//        lst.addLast(1);
+//        lst.addFirst(2);
+//        System.out.println(lst.getRecursive(1));
+//    }
 }
