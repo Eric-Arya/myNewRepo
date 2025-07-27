@@ -26,7 +26,15 @@ public class LinkedListDeque<T> {
         A.prev = A;
         sentinel = A;
     }
-
+    public void printDeque(){
+        int t = size;
+        Node p = sentinel.next;
+        while(t > 0){
+            System.out.println(p.item);
+            t--;
+        }
+        System.out.println();
+    }
 
     public void addFirst(T item){
         size += 1;
